@@ -7,7 +7,7 @@ function UserPage() {
   // this component doesn't do much to start, just renders some user reducer info to the DOM
   const user = useSelector((store) => store.user);
   const dispatch = useDispatch();
-  const sessions = useSelectior((store) => store.sessions);
+  const sessions = useSelector((store) => store.sessions);
   const history = useHistory();
   useEffect(() => {
     dispatch({ type: "FETCH_SESSIONS" });
