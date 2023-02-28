@@ -10,3 +10,5 @@ function* fetchAllSessions() {
     console.log("get all error");
   }
 }
+
+export default fetchAllSessions;
