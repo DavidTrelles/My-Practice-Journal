@@ -17,10 +17,11 @@ function UserPage() {
     <div className="container">
       <h2>Welcome, {user.username}!</h2>
       <p>Your ID is: {user.id}</p>
+      <p>Previous Entries:</p>
       <section className="sessions">
         {sessions.map((session) => {
           return (
-            <div class="session" key={session.id}>
+            <div className="session" key={session.id}>
               <h3>{session.title}</h3>
             </div>
           );

@@ -1,14 +1,16 @@
 import axios from "axios";
-import { put } from "redux-saga/effects";
+import { takeEvery, put } from "redux-saga/effects";
 
 function* fetchAllSessions() {
   try {
-    const movies = yield axios.get("/api/sessions");
+    const sessions = yield axios.get("/api/sessions");
     console.log("get all:", sessions.data);
     yield put({ type: "SET_SESSIONS", payload: sessions.data });
   } catch {
     console.log("get all error");
   }
 }
-
-export default fetchAllSessions;
+function* sessionsSaga() {
+  yield takeEvery("FETCH_SESSIONS", fetchAllSessions);
+}
+export default sessionsSaga;
