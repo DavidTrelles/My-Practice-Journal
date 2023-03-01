@@ -15,6 +15,10 @@ function UserPage() {
   const handleClick = () => {
     history.push("/newsession");
   };
+
+  const handleClick2 = (session) => {
+    history.push(`/details/${session.id}`);
+  };
   return (
     <div className="container">
       <h2>Welcome, {user.username}!</h2>
@@ -23,7 +27,13 @@ function UserPage() {
       <section className="sessions">
         {sessions.map((session) => {
           return (
-            <div className="session" key={session.id}>
+            <div
+              className="session"
+              key={session.id}
+              onClick={() => {
+                handleClick2(session);
+              }}
+            >
               <h3>{session.title}</h3>
               <h4>{session.date}</h4>
             </div>

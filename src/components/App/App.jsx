@@ -72,6 +72,10 @@ function App() {
             <SessionForm />
           </ProtectedRoute>
 
+          <ProtectedRoute exact path="/details/:id">
+            <SessionDetails />
+          </ProtectedRoute>
+
           <Route exact path="/login">
             {user.id ? (
               // If the user is already logged in,
