@@ -20,6 +20,7 @@ import LandingPage from "../LandingPage/LandingPage";
 import LoginPage from "../LoginPage/LoginPage";
 import RegisterPage from "../RegisterPage/RegisterPage";
 import SessionForm from "../SessionForm/SessionForm";
+import SessionDetails from "../SessionDetails/SessionDetails";
 import "./App.css";
 
 function App() {
