@@ -12,7 +12,9 @@ function UserPage() {
   useEffect(() => {
     dispatch({ type: "FETCH_SESSIONS" });
   }, []);
-
+  const handleClick = () => {
+    history.push("/newsession");
+  };
   return (
     <div className="container">
       <h2>Welcome, {user.username}!</h2>
@@ -23,9 +25,11 @@ function UserPage() {
           return (
             <div className="session" key={session.id}>
               <h3>{session.title}</h3>
+              <h4>{session.date}</h4>
             </div>
           );
         })}
+        <button onClick={handleClick}>New session</button>
       </section>
 
       <LogOutButton className="btn" />
