@@ -16,7 +16,11 @@ const SessionDetails = () => {
       {" "}
       {session.length > 0 && (
         <>
-          <p>Your Previous Practice session: {session[0].title}</p>
+          <div>
+            {session.map((detail) => {
+              return <p>Your Previous Practice session: {detail.title}</p>;
+            })}
+          </div>
         </>
       )}
     </>
