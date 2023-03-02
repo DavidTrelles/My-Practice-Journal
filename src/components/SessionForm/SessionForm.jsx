@@ -9,22 +9,88 @@ const SessionForm = () => {
   const [notes, setNotes] = useState("");
   const [date, setDate] = useState("");
   const [minutes, setMinutes] = useState(0);
-  const user = useSelector((store) => store.user);
-
+  const user_id = useSelector((store) => store.user.id);
+  const dispatch = useDispatch();
+  const history = useHistory();
   const handleSubmit = (event) => {
     event.preventDefault();
+    const newSession = {
+      title,
+      description,
+      link,
+      minutes,
+      notes,
+      user_id,
+    };
+    dispatch({ type: "POST_SESSION", payload: newSession });
+    setTitle("");
+    setDescription("");
+    setLink("");
+    setMinutes("");
+    setNotes("");
+    history.push("/user");
   };
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form className="formPanel" onSubmit={handleSubmit}>
+        <h2>New Practice Session</h2>
         <label htmlFor="title">Title: </label>
+        <br />
         <input
           id="title"
           name="title"
           value={title}
           placeholder="Composition title"
           onChange={(event) => setTitle(event.target.value)}
+          required
         />
+        <br />
+        <label htmlFor="description">Description: </label>
+        <br />
+        <input
+          id="description"
+          name="description"
+          value={description}
+          placeholder="Measures 35-61"
+          onChange={(event) => setDescription(event.target.value)}
+          required
+        />
+        <br />
+        <label htmlFor="link">YouTube Link: </label>
+        <br />
+        <input
+          id="link"
+          name="link"
+          value={link}
+          placeholder="YouTube link"
+          onChange={(event) => setLink(event.target.value)}
+        />
+        <br />
+        <label htmlFor="minutes">Minutes practiced: </label>
+        <br />
+        <input
+          id="minutes"
+          name="minutes"
+          type="number"
+          value={minutes}
+          placeholder="Minutes practiced"
+          onChange={(event) => setMinutes(event.target.value)}
+          required
+        />
+        <br />
+        <label htmlFor="notes">Notes: </label>
+        <br />
+        <textarea
+          id="notes"
+          name="notes"
+          value={notes}
+          placeholder="Put your notes here"
+          onChange={(event) => setNotes(event.target.value)}
+        />
+        <br />
+        <button type="submit" className="submit-button">
+          Submit
+        </button>
       </form>
     </>
   );
