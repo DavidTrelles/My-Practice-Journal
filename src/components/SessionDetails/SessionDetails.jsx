@@ -10,6 +10,10 @@ const SessionDetails = () => {
   useEffect(() => {
     dispatch({ type: "FETCH_SESSION", payload: id });
   }, [id]);
+  function deleteThis() {
+    dispatch({ type: "DELETE", payload: id });
+    history.push("/user");
+  }
   console.log(session.title);
   return (
     <>
@@ -20,6 +24,7 @@ const SessionDetails = () => {
             {session.map((detail) => {
               return <p>Your Previous Practice session: {detail.title}</p>;
             })}
+            <button onClick={deleteThis}>Delete</button>
           </div>
         </>
       )}

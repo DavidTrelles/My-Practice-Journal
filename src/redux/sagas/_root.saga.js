@@ -5,6 +5,7 @@ import userSaga from "./user.saga";
 import sessionsSaga from "./fetchSessions.saga";
 import sessionSaga from "./fetchSession.saga";
 import newSessionSaga from "./newSession.saga";
+import deleteSaga from "./delete.saga";
 // rootSaga is the primary saga.
 // It bundles up all of the other sagas so our project can use them.
 // This is imported in index.js as rootSaga
@@ -20,5 +21,6 @@ export default function* rootSaga() {
     sessionsSaga(),
     sessionSaga(),
     newSessionSaga(),
+    deleteSaga(),
   ]);
 }
