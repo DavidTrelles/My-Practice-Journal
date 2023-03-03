@@ -16,6 +16,7 @@ const SessionForm = () => {
     event.preventDefault();
     const newSession = {
       title,
+      date,
       description,
       link,
       minutes,
@@ -42,6 +43,17 @@ const SessionForm = () => {
           value={title}
           placeholder="Composition title"
           onChange={(event) => setTitle(event.target.value)}
+          required
+        />
+        <br />
+        <label htmlFor="date">Date: </label>
+        <br />
+        <input
+          id="date"
+          name="date"
+          value={date}
+          placeholder="3/1/2023"
+          onChange={(event) => setDate(event.target.value)}
           required
         />
         <br />

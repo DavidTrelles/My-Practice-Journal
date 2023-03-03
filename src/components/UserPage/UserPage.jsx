@@ -39,7 +39,9 @@ function UserPage() {
             </div>
           );
         })}
-        <button onClick={handleClick}>New session</button>
+        <button className="btn" onClick={handleClick}>
+          New session
+        </button>
       </section>
 
       <LogOutButton className="btn" />

@@ -45,6 +45,22 @@ router.get("/:id", (req, res) => {
  * POST route template
  */
 router.post("/", (req, res) => {
+  const date = req.body.date;
+  const title = req.body.title;
+  const description = req.body.description;
+  const link = req.body.link;
+  const minutes = req.body.minutes;
+  const notes = req.body.notes;
+  const user_id = req.body.user_id;
+  const queryText = `INSERT into "session" (date, title, description, link, minutes, notes, user_id)
+  VALUES ($1, $2, $3, $4, $5, $6, $7)`;
+  pool
+    .query(queryText, [date, title, description, link, minutes, notes, user_id])
+    .then(() => res.sendStatus(201))
+    .catch((err) => {
+      console.log("User registration failed: ", err);
+      res.sendStatus(500);
+    });
   // POST route code here
 });
 
