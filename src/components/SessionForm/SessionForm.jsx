@@ -27,6 +27,7 @@ const SessionForm = () => {
     setTitle("");
     setDescription("");
     setLink("");
+    setDate("");
     setMinutes("");
     setNotes("");
     history.push("/user");

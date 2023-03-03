@@ -45,6 +45,7 @@ router.get("/:id", (req, res) => {
  * POST route template
  */
 router.post("/", (req, res) => {
+  console.log(req.body);
   const date = req.body.date;
   const title = req.body.title;
   const description = req.body.description;
@@ -58,7 +59,7 @@ router.post("/", (req, res) => {
     .query(queryText, [date, title, description, link, minutes, notes, user_id])
     .then(() => res.sendStatus(201))
     .catch((err) => {
-      console.log("User registration failed: ", err);
+      console.log("session post failed: ", err);
       res.sendStatus(500);
     });
   // POST route code here
