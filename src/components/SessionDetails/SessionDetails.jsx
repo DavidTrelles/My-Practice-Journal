@@ -22,7 +22,11 @@ const SessionDetails = () => {
         <>
           <div>
             {session.map((detail) => {
-              return <p>Your Previous Practice session: {detail.title}</p>;
+              return (
+                <p key={detail.id}>
+                  Your Previous Practice session: {detail.title}
+                </p>
+              );
             })}
             <button onClick={deleteThis}>Delete</button>
           </div>
