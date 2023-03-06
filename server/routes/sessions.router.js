@@ -86,11 +86,11 @@ router.put("/", (req, res) => {
   const title = req.body.title;
   const description = req.body.description;
   const link = req.body.link;
-  const minutes = req.body.minutes;
+  const minutes = Number(req.body.minutes);
   const notes = req.body.notes;
-  const user_id = req.body.user_id;
-  const id = req.body.id;
-  const queryText = `UPDATE "session" SET "date" = $1, "title" = $2, "description" = $3, "link" = $4, "minutes" = $5, notes = $6, user_id = $7 WHERE "id" = $8`;
+  const user_id = Number(req.body.user_id);
+  const id = Number(req.body.id);
+  const queryText = `UPDATE "session" SET "date" = $1, "title" = $2, "description" = $3, "link" = $4, "minutes" = $5, "notes" = $6, "user_id" = $7 WHERE "id" = $8`;
   pool
     .query(queryText, [
       date,

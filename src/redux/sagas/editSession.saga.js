@@ -3,7 +3,7 @@ import { takeEvery, put } from "redux-saga/effects";
 function* editSession(action) {
   try {
     console.log("in postSession");
-    yield axios.post("/api/sessions/", action.payload);
+    yield axios.put("/api/sessions/", action.payload);
     yield put({ type: "FETCH_SESSIONS" });
     console.log(action.payload);
   } catch (error) {
@@ -11,6 +11,6 @@ function* editSession(action) {
   }
 }
 function* editSessionSaga() {
-  yield takeEvery("EDIT_SESSION", editSession);
+  yield takeEvery("UPDATE_SESSION", editSession);
 }
 export default editSessionSaga;
