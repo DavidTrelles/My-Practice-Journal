@@ -42,13 +42,15 @@ const SessionDetails = () => {
     setDescription(detail.description);
     setDate(detail.date);
     setLink(detail.link);
-    setDate(detail.date);
     setMinutes(detail.minutes);
     setNotes(detail.notes);
     setShowDetails(!showDetails);
   };
   function deleteThis() {
     dispatch({ type: "DELETE", payload: id });
+    history.push("/user");
+  }
+  function goBack() {
     history.push("/user");
   }
   console.log(session.title);
@@ -61,8 +63,27 @@ const SessionDetails = () => {
             <div>
               {session.map((detail) => {
                 return (
-                  <div key={detail.id}>
-                    Your Previous Practice session: {detail.title}
+                  <div className="formPanel" key={detail.id}>
+                    <h1 className="needsCenter">
+                      Your Previous Practice session:
+                    </h1>
+                    <h2> {detail.title}</h2>
+                    <h3>Description: {detail.description}</h3>
+                    <h3>Date: {detail.date}</h3>
+                    <h3>Link: </h3>
+                    <div className="video">
+                      <iframe
+                        width="350"
+                        height="315"
+                        src={detail.link}
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+                    <h3>Minutes: {detail.minutes}</h3>
+                    <h3>Notes: {detail.notes}</h3>
                     <button
                       onClick={() => {
                         toggleEdit(detail);
@@ -70,10 +91,11 @@ const SessionDetails = () => {
                     >
                       Edit
                     </button>
+                    <button onClick={deleteThis}>Delete</button>
+                    <button onClick={goBack}>Back</button>
                   </div>
                 );
               })}
-              <button onClick={deleteThis}>Delete</button>
             </div>
           </>
         )}

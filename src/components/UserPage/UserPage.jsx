@@ -21,14 +21,13 @@ function UserPage() {
   };
   return (
     <div className="container">
-      <h2>Welcome, {user.username}!</h2>
-      <p>Your ID is: {user.id}</p>
-      <p>Previous Entries:</p>
+      <h2 className="needsCenter">Welcome, {user.username}!</h2>
+      <h2 className="needsCenter">Your Journal</h2>
       <section className="sessions">
         {sessions.map((session) => {
           return (
             <div
-              className="session"
+              className="formPanel"
               key={session.id}
               onClick={() => {
                 handleClick2(session);
@@ -39,9 +38,11 @@ function UserPage() {
             </div>
           );
         })}
-        <button className="btn" onClick={handleClick}>
-          New session
-        </button>
+        <div className="formPanel">
+          <button className="btn" onClick={handleClick}>
+            New session
+          </button>
+        </div>
       </section>
 
       <LogOutButton className="btn" />
