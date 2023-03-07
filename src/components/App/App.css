@@ -25,6 +25,25 @@ Container
 /* --------------------------------------------------------------------------------
 Button
 -------------------------------------------------------------------------------- */
+.container1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100px;
+  position: relative;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+}
+
+.divider {
+  width: 5px;
+  /* height:auto; */
+  display: inline-block;
+}
 
 .btn {
   display: inline-block;
@@ -112,4 +131,19 @@ input {
 }
 .needsCenter {
   text-align: center;
+}
+/* cards------------------------------------------------- */
+.card {
+  box-sizing: border-box;
+  width: 400px;
+  max-width: 100%;
+  padding: 25px;
+  margin: 0 auto 20px;
+  background-color: #efefef;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgb(0, 0, 0, 0.4);
+}
+
+.card:hover {
+  background-color: #8c8989;
 }

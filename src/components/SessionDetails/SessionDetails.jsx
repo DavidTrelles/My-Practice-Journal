@@ -85,14 +85,21 @@ const SessionDetails = () => {
                     <h3>Minutes: {detail.minutes}</h3>
                     <h3>Notes: {detail.notes}</h3>
                     <button
+                      className="btn"
                       onClick={() => {
                         toggleEdit(detail);
                       }}
                     >
                       Edit
                     </button>
-                    <button onClick={deleteThis}>Delete</button>
-                    <button onClick={goBack}>Back</button>
+                    <div class="divider" />
+                    <button className="btn" onClick={deleteThis}>
+                      Delete
+                    </button>
+                    <div class="divider" />
+                    <button className="btn" onClick={goBack}>
+                      Back
+                    </button>
                   </div>
                 );
               })}
@@ -136,7 +143,7 @@ const SessionDetails = () => {
                       <br />
                       <label htmlFor="description">Description: </label>
                       <br />
-                      <input
+                      <textarea
                         id="description"
                         name="description"
                         defaultValue={detail.description}
@@ -176,8 +183,11 @@ const SessionDetails = () => {
                     </div>
                   );
                 })}
-                <button onClick={toggleEdit}>Cancel</button>
-                <button type="submit" className="submit-button">
+                <button className="btn" onClick={toggleEdit}>
+                  Cancel
+                </button>
+                <div class="divider" />
+                <button className="btn" type="submit">
                   Submit
                 </button>
               </form>

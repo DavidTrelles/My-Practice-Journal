@@ -32,6 +32,9 @@ const SessionForm = () => {
     setNotes("");
     history.push("/user");
   };
+  function goBack() {
+    history.push("/user");
+  }
   return (
     <>
       <form className="formPanel" onSubmit={handleSubmit}>
@@ -101,8 +104,12 @@ const SessionForm = () => {
           onChange={(event) => setNotes(event.target.value)}
         />
         <br />
-        <button type="submit" className="submit-button">
+        <button type="submit" className="btn">
           Submit
+        </button>
+        <div class="divider" />
+        <button className="btn" onClick={goBack}>
+          Back
         </button>
       </form>
     </>

@@ -27,7 +27,7 @@ function UserPage() {
         {sessions.map((session) => {
           return (
             <div
-              className="formPanel"
+              className="card"
               key={session.id}
               onClick={() => {
                 handleClick2(session);
@@ -44,8 +44,11 @@ function UserPage() {
           </button>
         </div>
       </section>
-
-      <LogOutButton className="btn" />
+      <div className="container1">
+        <div className="vertical-center">
+          <LogOutButton className="btn" />
+        </div>
+      </div>
     </div>
   );
 }
