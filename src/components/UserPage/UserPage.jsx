@@ -12,6 +12,7 @@ function UserPage() {
   useEffect(() => {
     dispatch({ type: "FETCH_SESSIONS" });
   }, []);
+
   const handleClick = () => {
     history.push("/newsession");
   };
@@ -21,8 +22,7 @@ function UserPage() {
   };
   return (
     <div className="container">
-      <h2 className="needsCenter">Welcome, {user.username}!</h2>
-      <h2 className="needsCenter">Your Journal</h2>
+      <h1 className="needsCenter">Welcome to Your Journal, {user.username}!</h1>
       <section className="sessions">
         {sessions.map((session) => {
           return (
@@ -38,7 +38,7 @@ function UserPage() {
             </div>
           );
         })}
-        <div className="formPanel">
+        <div className="box">
           <button className="btn" onClick={handleClick}>
             New session
           </button>

@@ -25,7 +25,7 @@ router.get("/", (req, res) => {
 router.get("/:id", (req, res) => {
   if (req.isAuthenticated()) {
     console.log("hello from id request!", req.params.id);
-    const queryText = `SELECT * FROM "session" WHERE id = $1`;
+    const queryText = `SELECT * FROM "session" WHERE id = $1 AND user_id = ${req.user.id}`;
     let id = req.params.id;
     pool
       .query(queryText, [id])

@@ -63,7 +63,7 @@ const SessionDetails = () => {
             <div>
               {session.map((detail) => {
                 return (
-                  <div className="formPanel" key={detail.id}>
+                  <div id="details" className="box" key={detail.id}>
                     <h1 className="needsCenter">
                       Your Previous Practice session:
                     </h1>
@@ -73,7 +73,7 @@ const SessionDetails = () => {
                     <h3>Link: </h3>
                     <div className="video">
                       <iframe
-                        width="350"
+                        width="450"
                         height="315"
                         src={detail.link}
                         title="YouTube video player"

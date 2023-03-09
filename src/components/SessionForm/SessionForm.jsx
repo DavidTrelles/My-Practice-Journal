@@ -8,7 +8,7 @@ const SessionForm = () => {
   const [link, setLink] = useState("");
   const [notes, setNotes] = useState("");
   const [date, setDate] = useState("");
-  const [minutes, setMinutes] = useState(0);
+  const [minutes, setMinutes] = useState("");
   const user_id = useSelector((store) => store.user.id);
   const dispatch = useDispatch();
   const history = useHistory();
@@ -78,7 +78,7 @@ const SessionForm = () => {
           id="link"
           name="link"
           value={link}
-          placeholder="YouTube link"
+          placeholder="Use the embed tool"
           onChange={(event) => setLink(event.target.value)}
         />
         <br />
@@ -107,7 +107,7 @@ const SessionForm = () => {
         <button type="submit" className="btn">
           Submit
         </button>
-        <div class="divider" />
+        <div className="divider" />
         <button className="btn" onClick={goBack}>
           Back
         </button>
