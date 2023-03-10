@@ -70,7 +70,6 @@ const SessionDetails = () => {
                     <h2> {detail.title}</h2>
                     <h3>Description: {detail.description}</h3>
                     <h3>Date: {detail.date}</h3>
-                    <h3>Link: </h3>
                     <div className="video">
                       <iframe
                         width="450"
