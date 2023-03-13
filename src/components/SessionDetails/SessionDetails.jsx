@@ -1,6 +1,8 @@
+import { TextField } from "@mui/material";
 import { useEffect, useState, useLayoutEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useHistory, useParams } from "react-router-dom";
+// import { TextField } from "@mui/material";
 
 const SessionDetails = () => {
   const { id } = useParams();
@@ -63,7 +65,7 @@ const SessionDetails = () => {
             <div>
               {session.map((detail) => {
                 return (
-                  <div id="details" className="box" key={detail.id}>
+                  <div id="details" className="container" key={detail.id}>
                     <h1 className="needsCenter">
                       Your Previous Practice session:
                     </h1>
@@ -119,69 +121,90 @@ const SessionDetails = () => {
                   return (
                     <div key={detail.id}>
                       <h2>Edit Practice Session</h2>
-                      <label htmlFor="title">Title: </label>
+                      {/* <label htmlFor="title">Title: </label> */}
                       <br />
-                      <input
-                        id="title"
+                      <TextField
+                        id="outlined-basic"
+                        label="Composition Title"
+                        variant="outlined"
                         type="text"
+                        margin="dense"
                         name="title"
                         defaultValue={detail.title}
                         onChange={(event) => setTitle(event.target.value)}
                         required
-                      ></input>
+                        fullWidth
+                      ></TextField>
                       <br />
-                      <label htmlFor="date">Date: </label>
+                      {/* <label htmlFor="date">Date: </label> */}
                       <br />
-                      <input
-                        id="date"
+                      <TextField
+                        id="outlined-basic"
+                        label="Date"
+                        variant="outlined"
+                        type="text"
+                        // margin="dense"
                         name="date"
                         defaultValue={detail.date}
                         onChange={(event) => setDate(event.target.value)}
                         required
-                      />
+                        fullWidth
+                      ></TextField>
                       <br />
-                      <label htmlFor="description">Description: </label>
+                      {/* <label htmlFor="description">Description: </label> */}
                       <br />
-                      <textarea
-                        id="description"
+                      <TextField
+                        id="outlined-textarea"
                         name="description"
+                        label="Description"
                         defaultValue={detail.description}
                         onChange={(event) => setDescription(event.target.value)}
+                        multiline
                         required
+                        fullWidth
                       />
                       <br />
-                      <label htmlFor="link">YouTube Link: </label>
+                      {/* <label htmlFor="link">YouTube Link: </label> */}
                       <br />
-                      <input
-                        id="link"
+                      <TextField
+                        id="outlined-basic"
                         name="link"
+                        variant="outlined"
+                        label="Youtube Link"
                         defaultValue={detail.link}
                         onChange={(event) => setLink(event.target.value)}
+                        fullWidth
                       />
                       <br />
-                      <label htmlFor="minutes">Minutes practiced: </label>
+                      {/* <label htmlFor="minutes">Minutes practiced: </label> */}
                       <br />
-                      <input
-                        id="minutes"
+                      <TextField
+                        id="outlined-basic"
                         name="minutes"
                         type="number"
+                        label="Minutes practiced"
                         defaultValue={detail.minutes}
                         onChange={(event) => setMinutes(event.target.value)}
                         required
+                        fullWidth
                       />
                       <br />
-                      <label htmlFor="notes">Notes: </label>
+                      {/* <label htmlFor="notes">Notes: </label> */}
                       <br />
-                      <textarea
-                        id="notes"
+                      <TextField
+                        label="Notes"
                         name="notes"
                         defaultValue={detail.notes}
                         onChange={(event) => setNotes(event.target.value)}
+                        multiline
+                        fullWidth
                       />
                       <br />
                     </div>
                   );
                 })}
+                <br />
+                <br />
                 <button className="btn" onClick={toggleEdit}>
                   Cancel
                 </button>

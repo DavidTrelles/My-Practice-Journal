@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
-
+import { TextField } from "@mui/material";
 const SessionForm = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -39,52 +39,60 @@ const SessionForm = () => {
     <>
       <form className="formPanel" onSubmit={handleSubmit}>
         <h2>New Practice Session</h2>
-        <label htmlFor="title">Title: </label>
+        {/* <label htmlFor="title">Title: </label> */}
         <br />
-        <input
+        <TextField
+          variant="outlined"
           id="title"
           name="title"
           value={title}
           placeholder="Composition title"
           onChange={(event) => setTitle(event.target.value)}
           required
+          fullWidth
         />
         <br />
-        <label htmlFor="date">Date: </label>
+        {/* <label htmlFor="date">Date: </label> */}
         <br />
-        <input
-          id="date"
+        <TextField
+          variant="outlined"
           name="date"
           value={date}
-          placeholder="3/1/2023"
+          placeholder="Date"
           onChange={(event) => setDate(event.target.value)}
           required
+          fullWidth
         />
         <br />
-        <label htmlFor="description">Description: </label>
+        {/* <label htmlFor="description">Description: </label> */}
         <br />
-        <input
+        <TextField
+          variant="outlined"
           id="description"
           name="description"
           value={description}
-          placeholder="Measures 35-61"
+          placeholder="Description"
           onChange={(event) => setDescription(event.target.value)}
           required
+          fullWidth
         />
         <br />
-        <label htmlFor="link">YouTube Link: </label>
+        {/* <label htmlFor="link">YouTube Link: </label> */}
         <br />
-        <input
+        <TextField
+          variant="outlined"
           id="link"
           name="link"
           value={link}
-          placeholder="Use the embed tool"
+          placeholder="Embed YouTube link"
           onChange={(event) => setLink(event.target.value)}
+          fullWidth
         />
         <br />
-        <label htmlFor="minutes">Minutes practiced: </label>
+        {/* <label htmlFor="minutes">Minutes practiced: </label> */}
         <br />
-        <input
+        <TextField
+          variant="outlined"
           id="minutes"
           name="minutes"
           type="number"
@@ -92,17 +100,23 @@ const SessionForm = () => {
           placeholder="Minutes practiced"
           onChange={(event) => setMinutes(event.target.value)}
           required
+          fullWidth
         />
         <br />
-        <label htmlFor="notes">Notes: </label>
+        {/* <label htmlFor="notes">Notes: </label> */}
         <br />
-        <textarea
+        <TextField
+          variant="outlined"
           id="notes"
           name="notes"
+          multiline
           value={notes}
           placeholder="Put your notes here"
           onChange={(event) => setNotes(event.target.value)}
+          fullWidth
         />
+        <br />
+        <br />
         <br />
         <button type="submit" className="btn">
           Submit

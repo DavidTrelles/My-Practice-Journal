@@ -9,12 +9,12 @@ function AboutPage() {
   return (
     <div className="container">
       <div>
-        <p>
+        <h3>
           The My Practice Journal app is a resource for musicians to record
           their daily practice. Whether you are a seasoned veteran looking to
           track your practice in one convenient place, or a beginner just
           getting started - it's great for all ages and levels, sign up today!
-        </p>
+        </h3>
       </div>
     </div>
   );

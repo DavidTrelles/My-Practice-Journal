@@ -37,7 +37,7 @@ function LoginForm() {
         {/* <label htmlFor="username">
           Username: */}
         <TextField
-          id="outlined-basic"
+          id="Usename"
           label="Username"
           variant="outlined"
           type="text"
@@ -53,7 +53,7 @@ function LoginForm() {
         {/* <label htmlFor="password">
           Password: */}
         <TextField
-          id="outlined-basic"
+          id="Pword"
           label="Password"
           variant="outlined"
           type="password"
@@ -66,15 +66,15 @@ function LoginForm() {
         {/* </label> */}
       </div>
       <div>
-        <Button
-          variant="contained"
-          // className="btn"
+        <button
+          // variant="contained"
+          className="btn"
           type="submit"
           name="submit"
           value="Log In"
         >
           Log In
-        </Button>
+        </button>
       </div>
     </form>
   );
