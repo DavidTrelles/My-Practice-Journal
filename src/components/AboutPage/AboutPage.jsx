@@ -10,10 +10,11 @@ function AboutPage() {
     <div className="container">
       <div>
         <h3>
-          The My Practice Journal app is a resource for musicians to record
-          their daily practice. Whether you are a seasoned veteran looking to
-          track your practice in one convenient place, or a beginner just
-          getting started - it's great for all ages and levels, sign up today!
+          The My Practice Journal app was develeped in 2023 using the following
+          technologies:
+          <br /> <br />
+          - React.js <br /> - Material UI <br /> - CSS <br />- JavaScript <br />
+          - Node.js <br /> - Redux <br /> - PostgreSQL
         </h3>
       </div>
     </div>

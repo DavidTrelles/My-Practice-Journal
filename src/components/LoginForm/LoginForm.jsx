@@ -37,9 +37,10 @@ function LoginForm() {
         {/* <label htmlFor="username">
           Username: */}
         <TextField
+          className="textfield"
           id="Usename"
           label="Username"
-          variant="outlined"
+          variant="filled"
           type="text"
           name="username"
           margin="dense"
@@ -53,9 +54,10 @@ function LoginForm() {
         {/* <label htmlFor="password">
           Password: */}
         <TextField
+          className="textfield"
           id="Pword"
           label="Password"
-          variant="outlined"
+          variant="filled"
           type="password"
           name="password"
           margin="dense"

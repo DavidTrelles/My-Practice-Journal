@@ -2,7 +2,7 @@ html,
 body,
 #react-root {
   height: 100%;
-  background-image: url("/Users/davidtrelles/Documents/Documents/prime-academy/week-20/My-Practice-Journal/public/img/background.png");
+  background-image: url("/public/img/background.png");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -54,13 +54,13 @@ Button
 .btn {
   font-family: Arial, Helvetica, sans-serif;
   display: inline-block;
-  padding: 10px 20px;
+  padding: 8px 15px;
   border-color: #014041;
   border-width: 1px 1px 3px;
-  border-radius: 4px;
+  border-radius: 8px;
   background-color: #20767c;
   color: #f8f8f8;
-  font-size: 1.1rem;
+  font-size: 1rem;
   outline: 0;
   cursor: pointer;
 }
@@ -156,7 +156,7 @@ input {
   max-width: 100%;
   padding: 25px;
   margin: 0 auto 20px;
-  background-color: #dbeef2;
+  background-color: #aceaf6;
   border-radius: 3px;
   box-shadow: 0 1px 2px rgb(0, 0, 0, 0.4);
 }
@@ -166,13 +166,13 @@ input {
   max-width: 100%;
   padding: 25px;
   margin: 0 auto 20px;
-  background-color: #dbeef2;
+  background-color: #aceaf6;
   border-radius: 3px;
   box-shadow: 0 1px 2px rgb(0, 0, 0, 0.4);
 }
 
 .card:hover {
-  background-color: #8c8989;
+  background-color: #84b3bc;
 }
 .container {
   box-sizing: border-box;
@@ -183,4 +183,17 @@ input {
   background-color: #04b3bf;
   border-radius: 3px;
   box-shadow: 0 1px 2px rgb(0, 0, 0, 0.4);
+}
+.landingcontainer {
+  box-sizing: border-box;
+  width: 700px;
+  max-width: 100%;
+  padding: 25px;
+  margin: 0 auto 20px;
+  background-color: #48b9c1;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgb(0, 0, 0, 0.4);
+}
+.textfield {
+  background-color: #3ce4f0;
 }

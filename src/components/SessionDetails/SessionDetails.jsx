@@ -67,7 +67,7 @@ const SessionDetails = () => {
                 return (
                   <div id="details" className="container" key={detail.id}>
                     <h1 className="needsCenter">
-                      Your Previous Practice session:
+                      Your Previous Practice Session:
                     </h1>
                     <h2> {detail.title}</h2>
                     <h3>Description: {detail.description}</h3>
@@ -124,12 +124,15 @@ const SessionDetails = () => {
                       {/* <label htmlFor="title">Title: </label> */}
                       <br />
                       <TextField
-                        id="outlined-basic"
                         label="Composition Title"
-                        variant="outlined"
+                        className="textfield"
+                        variant="filled"
                         type="text"
                         margin="dense"
                         name="title"
+                        // sx={{
+                        //   backgroundColor: "#3CE4F0",
+                        // }}
                         defaultValue={detail.title}
                         onChange={(event) => setTitle(event.target.value)}
                         required
@@ -139,9 +142,10 @@ const SessionDetails = () => {
                       {/* <label htmlFor="date">Date: </label> */}
                       <br />
                       <TextField
+                        className="textfield"
                         id="outlined-basic"
                         label="Date"
-                        variant="outlined"
+                        variant="filled"
                         type="text"
                         // margin="dense"
                         name="date"
@@ -154,7 +158,9 @@ const SessionDetails = () => {
                       {/* <label htmlFor="description">Description: </label> */}
                       <br />
                       <TextField
+                        className="textfield"
                         id="outlined-textarea"
+                        variant="filled"
                         name="description"
                         label="Description"
                         defaultValue={detail.description}
@@ -167,9 +173,10 @@ const SessionDetails = () => {
                       {/* <label htmlFor="link">YouTube Link: </label> */}
                       <br />
                       <TextField
+                        className="textfield"
                         id="outlined-basic"
                         name="link"
-                        variant="outlined"
+                        variant="filled"
                         label="Youtube Link"
                         defaultValue={detail.link}
                         onChange={(event) => setLink(event.target.value)}
@@ -179,9 +186,10 @@ const SessionDetails = () => {
                       {/* <label htmlFor="minutes">Minutes practiced: </label> */}
                       <br />
                       <TextField
-                        id="outlined-basic"
+                        className="textfield"
                         name="minutes"
                         type="number"
+                        variant="filled"
                         label="Minutes practiced"
                         defaultValue={detail.minutes}
                         onChange={(event) => setMinutes(event.target.value)}
@@ -192,8 +200,10 @@ const SessionDetails = () => {
                       {/* <label htmlFor="notes">Notes: </label> */}
                       <br />
                       <TextField
+                        className="textfield"
                         label="Notes"
                         name="notes"
+                        variant="filled"
                         defaultValue={detail.notes}
                         onChange={(event) => setNotes(event.target.value)}
                         multiline

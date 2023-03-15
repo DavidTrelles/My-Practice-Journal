@@ -35,14 +35,23 @@ const SessionForm = () => {
   function goBack() {
     history.push("/user");
   }
+  function fill() {
+    setTitle("Paganini Caprice no.17");
+    setDescription("Full run through");
+    setLink("https://www.youtube.com/embed/TwxSGV5qxi4");
+    setDate("3/21/23");
+    setMinutes("45");
+    setNotes("I'm pretty happy with this run through");
+  }
   return (
     <>
       <form className="formPanel" onSubmit={handleSubmit}>
-        <h2>New Practice Session</h2>
+        <h2 onClick={fill}>New Practice Session</h2>
         {/* <label htmlFor="title">Title: </label> */}
         <br />
         <TextField
-          variant="outlined"
+          variant="filled"
+          className="textfield"
           id="title"
           name="title"
           value={title}
@@ -55,7 +64,8 @@ const SessionForm = () => {
         {/* <label htmlFor="date">Date: </label> */}
         <br />
         <TextField
-          variant="outlined"
+          variant="filled"
+          className="textfield"
           name="date"
           value={date}
           placeholder="Date"
@@ -67,7 +77,8 @@ const SessionForm = () => {
         {/* <label htmlFor="description">Description: </label> */}
         <br />
         <TextField
-          variant="outlined"
+          variant="filled"
+          className="textfield"
           id="description"
           name="description"
           value={description}
@@ -80,7 +91,8 @@ const SessionForm = () => {
         {/* <label htmlFor="link">YouTube Link: </label> */}
         <br />
         <TextField
-          variant="outlined"
+          variant="filled"
+          className="textfield"
           id="link"
           name="link"
           value={link}
@@ -92,7 +104,8 @@ const SessionForm = () => {
         {/* <label htmlFor="minutes">Minutes practiced: </label> */}
         <br />
         <TextField
-          variant="outlined"
+          variant="filled"
+          className="textfield"
           id="minutes"
           name="minutes"
           type="number"
@@ -106,7 +119,8 @@ const SessionForm = () => {
         {/* <label htmlFor="notes">Notes: </label> */}
         <br />
         <TextField
-          variant="outlined"
+          variant="filled"
+          className="textfield"
           id="notes"
           name="notes"
           multiline
