@@ -1,5 +1,5 @@
-import React from 'react';
-
+import React from "react";
+import MyImage from "../../image/linked-in.png";
 // This is one of our simplest components
 // It doesn't have local state
 // It doesn't dispatch any redux actions or display any part of redux state
@@ -7,8 +7,15 @@ import React from 'react';
 
 function InfoPage() {
   return (
-    <div className="container">
-      <p>Info Page</p>
+    <div className="container2">
+      <h1>Info</h1>
+      <img
+        className="myImage"
+        src={MyImage}
+        alt="David"
+        width="500"
+        height="500"
+      />
     </div>
   );
 }

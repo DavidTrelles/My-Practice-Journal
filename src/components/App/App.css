@@ -38,6 +38,19 @@ Button
   height: 50px;
   position: relative;
 }
+.container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: 500px;
+  max-width: 100%;
+  padding: 25px;
+  margin: 0 auto 20px;
+  background-color: #04b3bf;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgb(0, 0, 0, 0.4);
+}
 
 .vertical-center {
   margin: 0;
