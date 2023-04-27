@@ -11,7 +11,7 @@ CREATE TABLE "user" (
 
 CREATE TABLE "session" (
 "id" SERIAL PRIMARY KEY,
-"date" DATE NOT NULL DEFAULT CURRENT_DATE,
+"date" VARCHAR(50),
 "title" VARCHAR (100) NOT NULL,
 "description" VARCHAR (200),
 "link" VARCHAR (1000),

@@ -14,7 +14,7 @@ function AboutPage() {
           technologies:
           <br /> <br />
           - React.js <br /> - Material UI <br /> - CSS <br />- JavaScript <br />
-          - Node.js <br /> - Redux <br /> - PostgreSQL
+          - Node.js <br /> - Redux <br /> - Redux Sagas <br /> - PostgreSQL
         </h3>
       </div>
     </div>
